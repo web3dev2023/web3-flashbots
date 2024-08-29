@@ -228,6 +228,7 @@ class Flashbots(Module):
                 "replacementUuid": (
                     opts["replacementUuid"] if "replacementUuid" in opts else None
                 ),
+                "builders": opts["builders"] if "builders" in opts else ["flashbots"],
             }
         ]
 
