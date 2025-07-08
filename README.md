@@ -1,3 +1,8 @@
+```
+pip install -U git+https://github.com/web3dev2023/web3-flashbots.git
+```
+
+
 # web3-flashbots
 
 This library works by injecting flashbots as a new module in the Web3.py instance, which allows submitting "bundles" of transactions directly to miners. This is done by also creating a middleware which captures calls to `eth_sendBundle` and `eth_callBundle`, and sends them to an RPC endpoint which you have specified, which corresponds to `mev-geth`.
