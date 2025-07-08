@@ -228,7 +228,9 @@ class Flashbots(Module):
                 "replacementUuid": (
                     opts["replacementUuid"] if "replacementUuid" in opts else None
                 ),
-                "builders": opts["builders"] if "builders" in opts else ["flashbots"],
+                "builders": opts["builders"] if "builders" in opts else ["flashbots", "f1b.io", "rsync", "beaverbuild.org", "builder0x69", "Titan", "EigenPhi", 
+                                                                 "boba-builder", "Gambit Labs", "payload", "Loki", "BuildAI", "JetBuilder", "tbuilder", 
+                                                                 "penguinbuild", "bobthebuilder", "BTCS", "bloXroute", "Blockbeelder", "Quasar", "Eureka"], #Based on https://github.com/flashbots/dowg/blob/main/builder-registrations.json
             }
         ]
 
@@ -424,6 +426,9 @@ class Flashbots(Module):
         params = {
             "tx": self.to_hex(signed_transaction),
             "maxBlockNumber": max_block_number,
+            "preferences": {"fast":True, "privacy":{"builders": ["flashbots", "f1b.io", "rsync", "beaverbuild.org", "builder0x69", "Titan", "EigenPhi", 
+                                                                 "boba-builder", "Gambit Labs", "payload", "Loki", "BuildAI", "JetBuilder", "tbuilder", 
+                                                                 "penguinbuild", "bobthebuilder", "BTCS", "bloXroute", "Blockbeelder", "Quasar", "Eureka"] }},
         }
         self.response = FlashbotsPrivateTransactionResponse(
             self.w3, signed_transaction, max_block_number
