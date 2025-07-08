@@ -1,5 +1,5 @@
 ```
-pip install -U git+https://github.com/web3dev2023/web3-flashbots.git
+pip install -U git+https://github.com/web3dev2023/web3-flashbots
 ```
 
 
